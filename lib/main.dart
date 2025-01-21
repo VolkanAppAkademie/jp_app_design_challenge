@@ -29,20 +29,11 @@ class SnackScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Image.asset(
-            width: 1000,
-            height: 500,
             'assets/grafiken/cupcake_chick.png',
-            //fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ],
       ),
-
-      /*Image.asset(
-        'assets/hintergründe/bg_startscreen.png',
-        fit: BoxFit.cover,
-        width: double.infinity,
-        height: double.infinity,
-      ),*/
     );
   }
 }
