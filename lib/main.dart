@@ -21,22 +21,35 @@ class SnackScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        fit: StackFit.expand,
-        children: [
-          Image.asset(
+      body: Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+          fit: BoxFit.cover,
+          image: AssetImage(
             'assets/hintergründe/bg_startscreen.png',
-            fit: BoxFit.cover,
           ),
-          Image.asset(
-            'assets/grafiken/cupcake_chick.png',
-            fit: BoxFit.contain,
-          ),
-          Image.asset(
-            'assets/details/snack_snack.png',
-            fit: BoxFit.contain,
-          )
-        ],
+        )),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            Positioned(
+              top: 150,
+              child: Transform.scale(
+                scale: 1.2,
+                child: Image.asset(
+                  'assets/grafiken/cupcake_chick.png',
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 75,
+              child: Image.asset(
+                'assets/details/snack_snack.png',
+                fit: BoxFit.contain,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
