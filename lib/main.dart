@@ -32,6 +32,10 @@ class SnackScreen extends StatelessWidget {
             'assets/grafiken/cupcake_chick.png',
             fit: BoxFit.contain,
           ),
+          Image.asset(
+            'assets/details/snack_snack.png',
+            fit: BoxFit.contain,
+          )
         ],
       ),
     );
